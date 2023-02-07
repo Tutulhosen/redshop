@@ -43,7 +43,7 @@ if (isset($cart_aside)) {
             <div class="col-content">
 
                 <div class="category-intro">
-                    <h3><?php echo $catInfo->name; ?></h3>
+                    <h3 style="color:red">Best Selling Products</h3>
                     <nav>
                         <ol class="breadcrumb">
                             <li><a href="<?php echo base_url(); ?>">Home</a></li>
@@ -65,7 +65,7 @@ if (isset($cart_aside)) {
 
 
                     <div class="sec-head u-flex u-flex--content-between u-flex--item-center">
-                        <h4><?php echo $catInfo->name; ?></h4>
+                    <h4 style="color:red">Best Selling Products</h4>
                         <!--<a class="Btn" href="#">More <i class="ti-angle-right"></i></a>-->
                     </div>
 
@@ -80,18 +80,18 @@ if (isset($cart_aside)) {
                                         <img class="lazyload" data-src="<?php echo base_url(); ?>resources/product-image/<?php echo $prodImg->img_name; ?>" alt="">
                                     </figure>
                                     <div class="content">
-                                        <h5><?php echo $prod->name; ?></h5>
+                                        <h5><?php echo $prod['name']; ?></h5>
                                         <div class="price">
                                             <div class="top">
 
-                                                <?php if ($prod->discount != '') { ?>
-                                                    <div class="old"><?php echo $prod->currency . '' . $prod->price; ?></div>
+                                                <?php if ($prod['discount'] != '') { ?>
+                                                    <div class="old"><?php echo $prod['currency'] . '' . $prod['price']; ?></div>
                                                 <?php } ?> &nbsp;
                                                 <div class="new">
-                                                    <?php if ($prod->discount == '') { ?>
-                                                        <?php echo $prod->currency . '' . $prod->price; ?>
+                                                    <?php if ($prod['discount'] == '') { ?>
+                                                        <?php echo $prod['currency'] . '' . $prod['price']; ?>
                                                     <?php } else { ?>
-                                                        <?php echo $prod->currency . '' . $prod->discount; ?>
+                                                        <?php echo $prod['currency'] . '' . $prod['discount']; ?>
                                                     <?php } ?>
                                                 </div>
     <!--                                                <div class="old"><?php // echo $prod->currency . '' . $prod->price;  ?></div>
@@ -100,7 +100,7 @@ if (isset($cart_aside)) {
                                         </div>-->
                                             </div>
                                             <!--                                            <div class="bottom">
-                                            <?php echo $prod->currency . '' . $prod->price; ?>
+                                            <?php echo $prod['currency'] . '' . $prod['price']; ?>
                                                                                         </div>-->
                                         </div>
                                     </div>
